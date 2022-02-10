@@ -1,0 +1,203 @@
+#VRML_OBJ R2021a utf8
+Robot {
+  translation -6.63565e-17 2.01005 0.039392
+  rotation -1 6.304952387026931e-13 1.6220961513886875e-13 0.0007995434308963864
+  children [
+    Camera {
+      translation 0.109025 0.0399999 0.0163641
+      rotation -0.4469680445966859 0.4469680445966859 0.7748800773144385 -1.8231153071795863
+      children [
+        Transform {
+          translation 0 0 0.02
+          rotation 1 0 0 1.5708
+          children [
+            Shape {
+              geometry Cylinder {
+                height 0.03
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "camera_left"
+      antiAliasing TRUE
+    }
+    Camera {
+      translation 0.109025 -0.0400001 0.0163644
+      rotation -0.4469680445966859 0.4469680445966859 0.7748800773144385 -1.8231153071795863
+      children [
+        Transform {
+          translation 0 0 0.02
+          rotation 1 0 0 1.5708
+          children [
+            Shape {
+              geometry Cylinder {
+                height 0.03
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "camera_right"
+      antiAliasing TRUE
+    }
+    Camera {
+      translation 0.109025 0 0.0163644
+      rotation -0.4469680445966859 0.4469680445966859 0.7748800773144385 -1.8231153071795863
+      children [
+        Transform {
+          translation 0 0 0.02
+          rotation 1 0 0 1.5708
+          children [
+            Shape {
+              geometry Cylinder {
+                height 0.03
+                radius 0.01
+              }
+            }
+          ]
+        }
+      ]
+      name "camera_mid"
+      antiAliasing TRUE
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3.965440000000003
+        axis 0 1 0
+        anchor 0.06 0.07 0
+      }
+      device [
+        RotationalMotor {
+          name "motor1"
+          maxVelocity 100
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 0.07 0
+        children [
+          DEF WHEEL Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 1 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3.965440000000003
+        axis 0 1 0
+        anchor -0.06 0.07 0
+      }
+      device [
+        RotationalMotor {
+          name "motor2"
+          maxVelocity 100
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 0.07 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 1 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3.965440000000003
+        axis 0 1 0
+        anchor 0.06 -0.07 0
+      }
+      device [
+        RotationalMotor {
+          name "motor3"
+          maxVelocity 100
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 -0.07 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 1 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 3.965440000000003
+        axis 0 1 0
+        anchor -0.06 -0.07 0
+      }
+      device [
+        RotationalMotor {
+          name "motor4"
+          maxVelocity 100
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 -0.07 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.5 1 1
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE WHEEL
+        physics Physics {
+        }
+      }
+    }
+    DEF BODY Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+    density -1
+    mass 1
+  }
+  controller "LineFollowing"
+}
