@@ -6,7 +6,7 @@
 
 ```bash
 .
-├── Final_project   \\ 期末大作业源码（感知规划运动）
-├── PRM_planning    \\ PRM 实现的路径规划源码
-└── RRT_planning    \\ RRT*实现的路径规划源码
+├── Final_project   // 期末大作业源码（感知规划运动）
+├── PRM_planning    // PRM 实现的路径规划源码
+└── RRT_planning    // RRT*实现的路径规划源码
 ```

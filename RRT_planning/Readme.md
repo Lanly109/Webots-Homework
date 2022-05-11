@@ -1,6 +1,8 @@
-# Webots RTT*路径规划
+# Webots RRT*路径规划
 
 演示视频：[bilibili](https://www.bilibili.com/video/BV1uL4y1s7yv)
+
+实验报告：[Webots——RRT算法](https://blog.lanly.vip/article/9)
 
 实验平台：Webots 2021b
 
