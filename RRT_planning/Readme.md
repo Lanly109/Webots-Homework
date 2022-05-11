@@ -1,6 +1,6 @@
 # Webots RTT*路径规划
 
-实验平台：Webots 2021a
+实验平台：Webots 2021b
 
 注：2022a版对坐标系进行了改变，详情点击[此处](https://github.com/cyberbotics/webots/wiki/How-to-adapt-your-world-or-PROTO-to-Webots-R2022a)，故请使用此版本之前的平台，比如2021a。当然你也可以使用该网站提到的的[脚本](https://github.com/cyberbotics/webots/blob/master/scripts/converter/convert_nue_to_enu_rub_to_flu.py)对世界文件进行坐标变换
 
